@@ -1,0 +1,14 @@
+{
+  "name": "wolckenhauer-express",
+  "version": "1.0.0",
+  "description": "private website",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "github.com/CruZer0",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.3"
+  }
+}
