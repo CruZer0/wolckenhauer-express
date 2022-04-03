@@ -1,0 +1,14 @@
+<h1>New Request from: <% mailContent.name %></h1>
+
+<p>Personal Information:</p>
+<ul>
+    <li>name: <%= mailContent.name %></li>
+    <% if(mailContent.email != adminMail) { %> 
+    <li>e-mail: <%= mailContent.mail %></li>
+    <% } %>
+</ul>
+<p>Request:</p>
+<ul>
+    <li>topic: <%= mailContent.subject %></li>
+</ul>
+<%= mailContent.message %> 
