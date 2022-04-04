@@ -1,10 +1,12 @@
 const express = require("express")
+const cors = require("cors")
 const bodyParser = require("body-parser")
 const app = express()
 require("dotenv").config();
 const {confirmationMail, contactMail} = require("./services/mail.js")
 
 app.use(bodyParser.json())
+app.use(cors())
 
 const port = () => {
     if(process.env.NODE_ENV === "production"){
