@@ -16,6 +16,7 @@ const contactMail = async(content) => {
     return new Promise((resolve, reject) => {
         ejs.renderFile("./mailTemplates/contactMail.ejs", {mailContent: content, adminMail: process.env.ADMIN_MAIL}, (err, template) => {
             if(err){
+                console.log(err)
                 reject(err)
             }
             else{
@@ -26,6 +27,7 @@ const contactMail = async(content) => {
                     html: template, 
                 }, (err, info) => {
                     if(err){
+                        console.log(err)
                         reject(err)
                     }
                     else{
